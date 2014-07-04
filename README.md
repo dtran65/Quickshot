@@ -9,7 +9,7 @@ To download the application visit the [release] section of the repository.
 ## Usage
 - Simply download your preferred [release] and run the accompanying program.
 - When you want to take a screenshot press `Print Screen` on your keyboard, the screen will pause giving you time to draw the capture region.
-  - You're actually looking at a screenshot of the screen from when you pressed `Print Screen`
+  - You're actually looking at a screenshot from when you pressed `Print Screen`
 - As soon as you release the left mouse button the image is uploaded to Imgur
 - A popup will appear with a single button allowing you to copy the URL to your clipboard.
 
