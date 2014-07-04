@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Fuchsia;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(14, 13);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ImageDisplay";
@@ -45,6 +45,7 @@
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ImageDisplay_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ImageDisplay_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImageDisplay_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ImageDisplay_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ImageDisplay_MouseUp);

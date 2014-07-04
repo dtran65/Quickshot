@@ -21,6 +21,11 @@ namespace io.github.charries96.quickshot
         private ContextMenu menu;
         private HotkeyManager hkm;
 
+        /// <summary>
+        /// Register the PrintScreen hotkey,
+        /// Create the ContextMenu and
+        /// setup the NotifyIcon.
+        /// </summary>
         public Uploader()
         {
             InitializeComponent();
@@ -53,6 +58,11 @@ namespace io.github.charries96.quickshot
             capture();
         }
 
+        /// <summary>
+        /// Create a new thread to upload the image on, 
+        /// stops the entire application being locked up
+        /// until it's complete.
+        /// </summary>
         public void capture()
         {
             Thread uploadThread = new Thread(new ThreadStart(upload));
@@ -64,11 +74,22 @@ namespace io.github.charries96.quickshot
             api = new ImgurAPI(Properties.Settings.Default.CLIENT_ID);
         }
 
+        /// <summary>
+        /// Upload the image to Imgur using the ImgurAPI class.
+        /// </summary>
         private void upload()
         {
-            updateUrl(api.UploadImage(TakeScreenshot()));
+            Image image = TakeScreenshot();
+            if(drawn)
+                updateUrl(api.UploadImage(image));
         }
 
+        /// <summary>
+        /// Grab the entire screen locally then display the 
+        /// ImageDisplay form to let users select the area
+        /// to be cropped.
+        /// </summary>
+        /// <returns>PrintScreen as Image</returns>
         private Image TakeScreenshot()
         {
             ScreenCapture sc = new ScreenCapture();
@@ -80,6 +101,11 @@ namespace io.github.charries96.quickshot
             return crop(image);
         }
 
+        /// <summary>
+        /// Crop the image based on what the ImageDisplay class was told.
+        /// </summary>
+        /// <param name="image">Image to crop</param>
+        /// <returns>Cropped Image as a Bitmap</returns>
         public Bitmap crop(Image image)
         {
             try
@@ -93,13 +119,14 @@ namespace io.github.charries96.quickshot
             }
             catch (Exception ex)
             {
-#if DEBUG
-                Debug.WriteLine(ex.Message);
-#endif
                 return null;
             }
         }
 
+        /// <summary>
+        /// (Thread-safe) Set the TextBox value.
+        /// </summary>
+        /// <param name="value">Value to set</param>
         public void updateUrl(String value)
         {
             if (InvokeRequired)
@@ -121,7 +148,7 @@ namespace io.github.charries96.quickshot
 
         private void OnExit(object sender, EventArgs e)
         {
-            UnregisterHotKey(this.Handle, 0);
+            UnregisterHotKey(hkm.Handle, 0);
             hkm.Dispose();
             Application.Exit();
         }

@@ -22,6 +22,10 @@ namespace io.github.charries96.quickshot
         /// </summary>
         private string clientId = "";
 
+        /// <summary>
+        /// Create a new ImgurAPI.
+        /// </summary>
+        /// <param name="clientId">Client ID in your Applications panel.</param>
         public ImgurAPI(String clientId)
         {
             this.clientId = clientId;
@@ -34,6 +38,10 @@ namespace io.github.charries96.quickshot
         /// <returns>URL to image as String.</returns>
         public String UploadImage(Image image)
         {
+            if (image == null)
+            {
+                return "Invalid image provided."; 
+            }
             WebClient w = new WebClient();
             w.Headers.Add("Authorization", "Client-ID " + clientId);
             NameValueCollection Keys = new NameValueCollection();
@@ -57,7 +65,7 @@ namespace io.github.charries96.quickshot
         /// </summary>
         /// <param name="image">Image to convert</param>
         /// <param name="format">Image format to save as.</param>
-        /// <returns></returns>
+        /// <returns>Base64 variant of the image.</returns>
         private string ImageToBase64(Image image)
         {
             using (MemoryStream ms = new MemoryStream())

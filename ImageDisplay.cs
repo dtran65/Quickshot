@@ -46,5 +46,11 @@ namespace io.github.charries96.quickshot
             Pen pen = new Pen(Color.Black, 2);
             e.Graphics.DrawRectangle(pen, rec);
         }
+
+        private void ImageDisplay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
+        }
     }
 }
