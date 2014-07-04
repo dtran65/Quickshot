@@ -3,6 +3,9 @@ Quickshot
 
 Lightweight screenshot application for Windows written in C#.
 
+## Downloads
+To download the application visit the [release] section of the repository.
+
 ## Usage
 - Simply download your preferred [release] and run the accompanying program.
 - When you want to take a screenshot press `Print Screen` on your keyboard, the screen will pause giving you time to draw the capture region.
@@ -17,7 +20,7 @@ I'm perfectly happy for people to use the source code from this project provided
 Please post it on the [issue] tracker if you haven't already, it's the easiest way for me to keep up to date on any flaws in the program.
 
 ### Note
-Whilst this project is actually designed as a learning resource for [Skkype](http://github.com/Skkype) it actually works extremely efficiently as a drop-in replacement for tools such as Gyazo and Lightshot.
+Whilst this project is actually designed as a learning resource for [Skkype](http://github.com/Skkype) it actually works extremely efficiently as a drop-in replacement for tools such as Gyazo and Lightshot, you can download it from the [release] section of the repository.
 
 [release]: https://github.com/charries96/Quickshot/releases
 [license]: https://github.com/charries96/Quickshot/blob/master/LICENSE
