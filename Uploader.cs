@@ -61,7 +61,7 @@ namespace io.github.charries96.quickshot
 
         private void Uploader_Load(object sender, EventArgs e)
         {
-            api = new ImgurAPI(Properties.Settings.Default.API_KEY);
+            api = new ImgurAPI(Properties.Settings.Default.CLIENT_ID);
         }
 
         private void upload()

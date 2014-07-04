@@ -42,7 +42,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ImageDisplay";
             this.TopMost = true;
-            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ImageDisplay_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImageDisplay_MouseDown);

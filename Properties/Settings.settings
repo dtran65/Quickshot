@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="io.github.charries96.quickshot.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="API_KEY" Type="System.String" Scope="User">
+    <Setting Name="CLIENT_ID" Type="System.String" Scope="User">
       <Value Profile="(Default)">d09e79c8399b5da</Value>
     </Setting>
   </Settings>

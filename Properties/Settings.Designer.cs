@@ -26,12 +26,12 @@ namespace io.github.charries96.quickshot.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("d09e79c8399b5da")]
-        public string API_KEY {
+        public string CLIENT_ID {
             get {
-                return ((string)(this["API_KEY"]));
+                return ((string)(this["CLIENT_ID"]));
             }
             set {
-                this["API_KEY"] = value;
+                this["CLIENT_ID"] = value;
             }
         }
     }

@@ -48,7 +48,7 @@ namespace io.github.charries96.quickshot
             }
             catch (Exception s)
             {
-                MessageBox.Show("Something went wrong. " + s.Message); return "Failed!";
+                return "Upload failed! Try again later.";
             }
         }
 
